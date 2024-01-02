@@ -1,0 +1,21 @@
+.sidebar {
+    background-color: rgb(223, 218, 218);
+    font-family: 'Fira Sans', sans-serif;
+    width: 300px;
+    height: 100vh;
+}
+
+.sidebar nav {
+    padding: 45px;
+}
+
+.sidebar nav li {
+    list-style: none;
+    font-size: 30px;
+    padding: 33px 0;
+}
+
+.sidebar nav li a {
+    text-decoration: none;
+    color: #000;
+}
