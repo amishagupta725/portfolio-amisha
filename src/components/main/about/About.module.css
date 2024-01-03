@@ -1,6 +1,7 @@
 .about {
     width: 85vw;
     height: 100vh;
+    padding: 23px;
 }
 
 .info-container {
@@ -57,4 +58,28 @@
 
 .dev-pic img {
     height: 70vh;
+}
+
+@media (max-width: 1200px) {
+    .dev-pic {
+        display: none;
+    }
+    .about-me {
+        font-size: 20px;
+    }
+    .description {
+        font-size: 15px;
+    }
+    .name {
+        font-size: 30px;
+    }
+    .hello {
+        font-size: 50px;
+    }
+    .buttons {
+        display: flex;
+    }
+    .buttons button {
+        font-size: 15px;
+    }
 }

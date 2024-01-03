@@ -1,19 +1,27 @@
-import { BrowserRouter, Link } from 'react-router-dom'
-
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import classes from './Sidebar.module.css'
-const Sidebar = () => {
+const Sidebar = (props) => {
+    let SbClass = props.show ? 'sidebar' : 'sidebar-close';
+    function handleClick(page) {
+        props.setPage(page);
+        if (page === 'about') {
+            window.history.pushState({}, '', '/portfolio-amisha');
+        } else if (page === 'contact') {
+            window.history.pushState({}, '', '/portfolio-amisha/contact');
+        }
+    }
     return (
-        <div className={classes["sidebar"]}>
-            <BrowserRouter>
+        props.show && <div className={classes[`${SbClass}`]}>
                 <nav>
                     <ul>
-                        <li><Link to='/'>Home</Link></li>
-                        <li><Link to='/intro'>Intro</Link></li>
-                        <li><Link to='/services'>Services</Link></li>
-                        <li><Link to='/blog'>Blog</Link></li>
+                        <li onClick={() => handleClick("about")} >Home</li>
+                        <li onClick={() => handleClick("contact")}>Contact </li>
+                        <li>Intro</li>
+                        <li>Services</li>
+                        <li>Blog</li>
                     </ul>
                 </nav>
-            </BrowserRouter>
         </div>
     )
 }

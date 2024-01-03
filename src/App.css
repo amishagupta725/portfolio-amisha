@@ -1,3 +1,18 @@
 .container {
     display: flex;
 }
+
+body {
+    overflow: hidden;
+}
+
+.hamburger {
+    position: absolute;
+    cursor: pointer;
+    top : 10px;
+    left: 10px;
+}
+
+.cross {
+    margin-left: 135px;
+}
