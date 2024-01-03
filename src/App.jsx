@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     let path = window.location.pathname;
-    if (path === '/portfolio-amisha') {
+    if (path === '/portfolio-amisha' || path === '/portfolio-amisha/') {
       setPage('about');
     } else if (path === '/portfolio-amisha/contact') {
       setPage('contact');
